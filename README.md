@@ -6,21 +6,46 @@ This repository contains reusable AI agent configuration and skills. It is desig
 
 ## How to Install
 
-The recommended approach is to add this repository as a git submodule named `.agent` in your new project:
+### For OpenCode
+
+The recommended approach for OpenCode is to add this repository as a git submodule named `.opencode` in your new project:
 
 ```bash
 cd my-new-project
-git submodule add https://github.com/paulopezgil/agent-config .agent
+git submodule add https://github.com/paulopezgil/agent-config .opencode
+```
+
+### For Claude Code
+
+The recommended approach for Claude Code is to add this repository as a git submodule named `.claude` in your new project:
+
+```bash
+cd my-new-project
+git submodule add https://github.com/paulopezgil/agent-config .claude
 ```
 
 This keeps your agent configuration version-controlled and easily updatable across projects.
 
 ## Initialization
 
-After adding the submodule, run the initialization script from your project root:
+After adding the submodule, run the respective initialization script from your project root.
+
+### For OpenCode
+
+Run the OpenCode initialization script:
 
 ```bash
-./.agent/scripts/init-ai.sh
+./.opencode/scripts/init-opencode.sh
 ```
 
 This script will ask for your project name and language, and copy the `AGENTS.md` template into your project root. You can then fill in the project-specific details to guide your AI agent.
+
+### For Claude Code
+
+Run the Claude Code initialization script:
+
+```bash
+./.claude/scripts/init-claude.sh
+```
+
+This script will ask for your project name and language, and copy the `CLAUDE.md` template into your project root. You can then fill in the project-specific details to guide your AI agent.
