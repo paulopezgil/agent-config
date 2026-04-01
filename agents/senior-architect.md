@@ -144,13 +144,3 @@ When invoked, follow this sequence:
 6. **Hand off** — end with a clear statement of what the developer should build first
    and why that is the right starting point. Reference the Initializer if the project
    has not been scaffolded yet.
-
----
-
-## This project
-
-This repository is `pytemplates` — a Python library that emulates C++ template syntax
-using Python decorators.
-
-Key decisions already made:
-- Python 3.11+,
