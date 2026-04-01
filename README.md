@@ -1,6 +1,6 @@
 # Agent Config 🛠️
 
-![Agent Config Banner](assets/banner.png)
+![Agent Config Banner](https://github.com/user-attachments/assets/9df24d12-a1b8-446b-861e-dd48cb273f25)
 
 Every new project starts the same way: the model is ready, the agent has no idea what your project is. You re-explain conventions, stack decisions, and team preferences from scratch — every session.
  
