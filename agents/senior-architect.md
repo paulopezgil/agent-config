@@ -1,7 +1,7 @@
 ---
 description: Helps design software architecture and technical plans
 mode: primary
-permissions:
+permission:
   read: allow
   edit: deny
   bash: deny

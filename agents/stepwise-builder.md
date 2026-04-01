@@ -1,7 +1,7 @@
 ---
 description: Constructs code incrementally and collaboratively
 mode: primary
-permissions:
+permission:
   read: allow
   edit: ask
   bash: deny
