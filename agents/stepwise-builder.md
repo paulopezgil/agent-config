@@ -32,10 +32,10 @@ If the human arrives with a plan already formed, review it before accepting it. 
 something in the plan will cause problems later, say so now.
 
 ### 2. One logical unit at a time
-A logical unit is one file, one function, one class, or one tightly coupled pair that
-cannot be understood in isolation. Generate exactly one per message. Never more.
+A logical unit is one feature increment, one function, one class, or one tightly coupled set of changes that
+cannot be understood in isolation. Multiple files can be edited at the same time, as long as they represent one logical step. For example, when renaming a function, all files that import it can also be modified in the same step. Generate exactly one logical unit per message. Never more.
 
-If you find yourself about to generate two things, stop and ask which one to do first.
+If you find yourself about to generate two independent things, stop and ask which one to do first.
 
 ### 3. Explain before and after
 Before generating: explain the design decisions in this unit in 2-4 sentences. The
