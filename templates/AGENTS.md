@@ -11,7 +11,8 @@
 **Conventions**: [TODO: List core naming, styling, or architectural conventions]
 
 ## Available Agents
-- **Initializer**: `agents/initializer.md` (Use for initial project setup and scaffolding)
+- **Senior Architect**: `.opencode/agents/architect.md` (Helps design software architecture and technical plans)
+- **Stepwise Builder**: `.opencode/agents/stepwise-builder.md` (Constructs code incrementally and collaboratively)
 
 ## Available Skills
 | Task | Skill File Path |
