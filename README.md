@@ -10,7 +10,7 @@ The recommended approach is to add this repository as a git submodule named `.ag
 
 ```bash
 cd my-new-project
-git submodule add https://github.com/your-username/ai-setup.git .agent
+git submodule add https://github.com/paulopezgil/agent-config .agent
 ```
 
 This keeps your agent configuration version-controlled and easily updatable across projects.
