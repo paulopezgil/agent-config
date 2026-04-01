@@ -3,7 +3,7 @@ description: Constructs code incrementally and collaboratively
 mode: primary
 permission:
   read: allow
-  edit: ask
+  edit: allow
   bash: deny
 ---
 
