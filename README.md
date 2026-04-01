@@ -1,4 +1,6 @@
-# ai-setup
+# Agent Config 🛠️
+
+![Agent Config Banner](assets/banner.png)
 
 This repository contains reusable AI agent configuration and skills. It is designed to be cloned into a new project to give an AI agent instant context, global preferences, and domain-specific skills.
 
