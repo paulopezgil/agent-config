@@ -14,6 +14,18 @@ Every new project starts the same way: the model is ready, the agent has no idea
 - **Skills** — Reusable instruction sets your agent loads on demand, following the [open Agent Skills standard](https://openagentskills.dev)
 - **Init scripts** — One command to scaffold your project's `AGENTS.md` or `CLAUDE.md` with your stack and conventions
 
+### Available Agents
+- **Explain** (`agents/explain.md`): Explains the current project architecture, codebase, and conventions
+- **Senior Architect** (`agents/senior-architect.md`): Helps design software architecture and technical plans
+- **Stepwise Builder** (`agents/stepwise-builder.md`): Constructs code incrementally and collaboratively
+
+### Available Commands
+- **ai-commit** (`commands/ai-commit.md`): Generates and applies an AI-driven commit
+
+### Available Skills
+- **Adding a Module** (`skills/adding-a-module.md`)
+- **Writing Tests** (`skills/writing-tests.md`)
+
 ## How to Install
 
 Add this repo as a git submodule into your project. The folder name tells your tool where to look.
