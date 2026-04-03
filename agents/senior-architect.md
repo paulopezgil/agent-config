@@ -4,7 +4,7 @@ mode: primary
 permission:
   read: allow
   edit: deny
-  bash: deny
+  bash: allow
 ---
 
 # The Architect

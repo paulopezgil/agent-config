@@ -4,7 +4,7 @@ mode: primary
 permission:
   read: allow
   edit: allow
-  bash: deny
+  bash: allow
 ---
 
 # The Stepwise Builder
