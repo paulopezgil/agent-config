@@ -3,7 +3,10 @@ description: Helps design software architecture and technical plans
 mode: primary
 permission:
   read: allow
-  edit: deny
+  edit: 
+    - "docs/**"
+  write:
+    - "docs/**"
   bash: allow
 ---
 
