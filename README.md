@@ -29,27 +29,23 @@ Every new project starts the same way: the model is ready, the agent has no idea
 
 ## How to Install
 
-Add this repo as a git submodule into your project. The folder name tells your tool where to look.
+Clone this repository directly into the root of your project. The folder name tells your tool where to look. Optionally, you can add `AGENTS.md`, `CLAUDE.md`, and the cloned directory (`.opencode` or `.claude`) to your `.gitignore` file to keep them out of your project's version control.
  
 ### OpenCode
  
 ```bash
-cd my-new-project
-git submodule add https://github.com/paulopezgil/agent-config .opencode
+git clone https://github.com/paulopezgil/agent-config .opencode
 ```
  
 ### Claude Code
  
 ```bash
-cd my-new-project
-git submodule add https://github.com/paulopezgil/agent-config .claude
+git clone https://github.com/paulopezgil/agent-config .claude
 ```
- 
-Your agent config is now version-controlled and updatable across all your projects with a single `git submodule update`.
 
 ## Initialization
 
-After adding the submodule, run the init script from your project root. It asks for your project name and language, then generates a ready-to-fill instructions file.
+After cloning the repository, run the init script from your project root. It asks for your project name and language, then generates a ready-to-fill instructions file.
  
 ### OpenCode
  
@@ -73,13 +69,15 @@ This script will ask for your project name and language, and copy the `CLAUDE.md
 
 ## Updating
  
-To pull in the latest agents and skills across all your projects:
+To pull in the latest agents and skills:
  
 ```bash
-git submodule update --remote --merge
+cd .opencode # or .claude
+git pull
 ```
  
  
 ## Contributing
  
 Found an agent or skill worth sharing? PRs are welcome. Check [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
