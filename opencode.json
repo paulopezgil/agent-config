@@ -1,0 +1,13 @@
+{
+  "agents": [
+    {
+      "name": "testing-agent",
+      "description": "Automates the creation and maintenance of the project test suite using tests/AGENTS.md as a task queue",
+      "instructions": ".opencode/agents/testing-agent.md",
+      "permissions": {
+        "read": ["**/*"],
+        "write": ["tests/**"]
+      }
+    }
+  ]
+}
