@@ -11,7 +11,9 @@
 **Conventions**: [TODO: List core naming, styling, or architectural conventions]
 
 ## Available Agents
-- **Senior Architect**: `.opencode/agents/architect.md` (Helps design software architecture and technical plans)
+- **Explain**: `.opencode/agents/explain.md` (Explains the current project architecture, codebase, and conventions)
+- **Linus Review**: `.opencode/agents/linus-review.md` (Provides technically rigorous code review with direct, unfiltered feedback)
+- **Senior Architect**: `.opencode/agents/senior-architect.md` (Helps design software architecture and technical plans)
 - **Stepwise Builder**: `.opencode/agents/stepwise-builder.md` (Constructs code incrementally and collaboratively)
 
 ## Available Skills
