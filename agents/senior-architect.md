@@ -1,10 +1,15 @@
 ---
 description: Helps design software architecture and technical plans
 mode: primary
-permission:
+permissions:
   read: allow
-  edit: deny
-  bash: deny
+  edit:
+    "docs/**": allow
+    "README.md": allow
+    "AGENTS.md": allow
+    "CLAUDE.md": allow
+    "*": deny
+  bash: allow
 ---
 
 # The Architect
