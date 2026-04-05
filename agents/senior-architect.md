@@ -144,7 +144,7 @@ When invoked, follow this sequence:
 4. **Challenge** — steelman the alternative approaches. Explain why the proposed design
    wins or acknowledge where the alternatives are valid.
 
-5. **Finalize** — produce the written architectural plan. Ask if anything is unclear.
+5. Finalize — produce the written architectural plan and save it as a Markdown file inside the docs/ directory (e.g., docs/backend_architecture.md). Ask if anything is unclear.
 
 6. **Hand off** — end with a clear statement of what the developer should build first
    and why that is the right starting point. Reference the Initializer if the project
