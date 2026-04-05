@@ -15,10 +15,12 @@ Every new project starts the same way: the model is ready, the agent has no idea
 - **Init scripts** — One command to scaffold your project's `AGENTS.md` or `CLAUDE.md` with your stack and conventions
 
 ### Available Agents
-- **Explain** (`agents/explain.md`): Explains the current project architecture, codebase, and conventions
-- **Linus Review** (`agents/linus-review.md`): Provides technically rigorous code review with direct, unfiltered feedback
-- **Senior Architect** (`agents/senior-architect.md`): Helps design software architecture and technical plans
-- **Stepwise Builder** (`agents/stepwise-builder.md`): Constructs code incrementally and collaboratively
+| Agent | File | Purpose |
+| --- | --- | --- |
+| Explain | `agents/explain.md` | Explains the project architecture, codebase, and conventions. |
+| Linus Review | `agents/linus-review.md` | Delivers direct, technically rigorous code review feedback. |
+| Senior Architect | `agents/senior-architect.md` | Designs software architecture and technical implementation plans. |
+| Stepwise Builder | `agents/stepwise-builder.md` | Builds code incrementally through collaborative, step-by-step changes. |
 
 ### Available Commands
 - **ai-commit** (`commands/ai-commit.md`): Generates and applies an AI-driven commit, adding significant changes to keep `README.md` updated when needed
@@ -80,4 +82,3 @@ git pull
 ## Contributing
  
 Found an agent or skill worth sharing? PRs are welcome. Check [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
