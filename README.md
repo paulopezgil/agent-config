@@ -6,11 +6,11 @@ Every new project starts the same way: the model is ready, the agent has no idea
  
 **Agent Config** is a drop-in agent configuration you clone into any project. Specialist agents, reusable commands, and project conventions — so your AI agent hits the ground running from session one.
 
-**Currently compatible with OpenCode and Claude Code.**
+**Currently compatible with OpenCode.**
 
 ## What's Inside
   
-- **Agents** — Specialist personas for common roles (code reviewer, planner, docs writer, etc.), each scoped with the right tools and permissions
+- **Agents** — Specialist personas for common roles, each scoped with the right tools and permissions
 - **Commands** — Reusable command definitions following the [open Agent Commands standard](https://openagentskills.dev)
 
 ### Available Agents
@@ -40,10 +40,6 @@ git clone https://github.com/paulopezgil/agent-config .opencode
 ```bash
 git clone https://github.com/paulopezgil/agent-config .claude
 ```
-
-## Initialization
-
-After cloning the repository, create an `AGENTS.md` or `CLAUDE.md` in your project root and customize it with your project-specific sections — stack, conventions, commands. That's what your agent reads at the start of every session.
 
 
 ## Updating
