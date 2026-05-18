@@ -1,4 +1,4 @@
-# ai-commit
+# Commit
 
 This command automates the process of evaluating uncommitted changes, updating the project's documentation if necessary, and then creating a single comprehensive git commit, WITH a human-in-the-loop approval step.
 

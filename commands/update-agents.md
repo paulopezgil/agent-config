@@ -1,4 +1,4 @@
-# ROLE & TASK
+# Update AGENTS.md
 You are acting as an expert Context Engineer. We have just finished a coding session where we modified the codebase and discussed future product, feature, and architectural ideas. 
 
 Your task is to analyze our session and update the 'AGENTS.md' file at the root of this project so future AI agents (or yourself in a new session) can seamlessly pick up exactly where we left off.
