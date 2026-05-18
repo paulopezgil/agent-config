@@ -1,31 +1,32 @@
 # Commit
 
-This command automates the process of evaluating uncommitted changes, updating the project's documentation if necessary, and then creating a single comprehensive git commit, WITH a human-in-the-loop approval step.
+This command stages the specified changes and creates a git commit. The AI analyzes the changes and generates an appropriate commit message.
+
+## INPUT
+
+User-provided description:
+$ARGUMENTS
 
 ## Instructions
-When the user runs this command, follow these steps strictly:
+When the user runs this command, follow these steps:
 
-1. **Analyze Current Changes**:
-   - Run `git status` to identify modified, deleted, and untracked files.
-   - Run `git diff` and `git diff --staged` to inspect the exact incoming changes across the codebase.
+1. **Parse the Arguments**:
+   - The user provides file paths or a description of what to commit.
+   - If the user provides file paths directly (e.g., `src/utils/foo.py tests/`), stage those files.
+   - If the user provides a description, interpret it and stage the relevant files.
 
-2. **Evaluate Documentation Impact**:
-   - Analyze the diffs. Determine if the significant changes introduce new features, alter existing architecture, add new dependencies, or change instructions that would require an update to the `README.md`.
-   - If you decide `README.md` *should* be updated:
-     - Read the current `README.md`.
-     - Update the `README.md` to accurately reflect the new changes.
-     - Stage the updated `README.md` using `git add README.md`.
+2. **Stage Changes**:
+   - Use `git add <files>` to stage the specified files.
 
-3. **Stage Remaining Changes**:
-   - Stage all the other relevant files that are part of this component/feature update.
+3. **Generate Commit Message**:
+   - Run `git diff --staged` to see what was staged.
+   - Generate a concise, descriptive commit message following conventional commit format.
+   - Format: `<type>(<scope>): <description>` where type is `feat`, `fix`, `docs`, `refactor`, etc.
 
-4. **Human-in-the-Loop Review (CRITICAL STEP)**:
-   - Run `git status` and `git diff --staged` to capture the final staged state.
-   - Summarize what you have staged (including what changed in the README, if anything) and what the proposed commit message will be.
-   - **PAUSE AND ASK THE USER FOR APPROVAL.** Use the `question` tool or simply ask in the chat: "Please review the staged changes. Do you approve me to commit this with the message: '<proposed message>'?"
-   - DO NOT proceed to step 5 until the user explicitly says yes or approves.
+4. **Commit**:
+   - Run `git commit -m "<generated message>"`.
+   - Run `git status` to confirm success.
 
-5. **Commit (Only after approval)**:
-   - If the user approves, run `git commit -m "<proposed message>"`.
-   - If the user requests changes, make the requested adjustments, stage them, and ask for approval again.
-   - Run `git status` after the commit completes to confirm success.
+5. **Update Documentation** (if applicable):
+   - If the changes introduce new features, alter architecture, or change user-facing instructions, update `README.md` accordingly.
+   - Create a separate commit for documentation updates with message: `docs: update README for <change summary>`.

@@ -4,15 +4,15 @@
 
 Every new project starts the same way: the model is ready, the agent has no idea what your project is. You re-explain conventions, stack decisions, and team preferences from scratch — every session.
  
-**Agent Config** is a drop-in agent configuration you clone into any project. Specialist agents, reusable skills, and project conventions — so your AI agent hits the ground running from session one.
+**Agent Config** is a drop-in agent configuration you clone into any project. Specialist agents, reusable commands, and project conventions — so your AI agent hits the ground running from session one.
 
 **Currently compatible with OpenCode and Claude Code.**
 
 ## What's Inside
- 
+  
 - **Agents** — Specialist personas for common roles (code reviewer, planner, docs writer, etc.), each scoped with the right tools and permissions
-- **Skills** — Reusable instruction sets your agent loads on demand, following the [open Agent Skills standard](https://openagentskills.dev)
-- **Init scripts** — One command to scaffold your project's `AGENTS.md` or `CLAUDE.md` with your stack and conventions
+- **Commands** — Reusable command definitions following the [open Agent Commands standard](https://openagentskills.dev)
+- **Templates** — Scaffolding files to generate project-specific AI configuration (`AGENTS.md`, `CLAUDE.md`)
 
 ### Available Agents
 | Agent | File | Purpose |
@@ -23,11 +23,11 @@ Every new project starts the same way: the model is ready, the agent has no idea
 | Stepwise Builder | `agents/stepwise-builder.md` | Builds code incrementally through collaborative, step-by-step changes. |
 
 ### Available Commands
-- **ai-commit** (`commands/ai-commit.md`): Generates and applies an AI-driven commit, adding significant changes to keep `README.md` updated when needed
-
-### Available Skills
-- **Adding a Module** (`skills/adding-a-module.md`)
-- **Writing Tests** (`skills/writing-tests.md`)
+| Command | File | Purpose |
+| --- | --- | --- |
+| ai-commit | `commands/ai-commit.md` | Generates and applies an AI-driven commit. |
+| end-session | `commands/end-session.md` | Finalizes a coding session and updates project documentation. |
+| update-readme | `commands/update-readme.md` | Updates README.md to reflect current project state. |
 
 ## How to Install
 
@@ -47,31 +47,26 @@ git clone https://github.com/paulopezgil/agent-config .claude
 
 ## Initialization
 
-After cloning the repository, run the init script from your project root. It asks for your project name and language, then generates a ready-to-fill instructions file.
- 
+After cloning the repository, manually copy the template you need into your project root and customize it.
+
 ### OpenCode
- 
+
 ```bash
-./.opencode/scripts/init-opencode.sh
+cp .opencode/templates/AGENTS.md ./AGENTS.md
 ```
- 
-Generates `AGENTS.md` in your project root.
- 
+
 ### Claude Code
- 
+
 ```bash
-./.claude/scripts/init-claude.sh
+cp .claude/templates/CLAUDE.md ./CLAUDE.md
 ```
- 
-Generates `CLAUDE.md` in your project root.
- 
+
 Open the generated file and fill in the project-specific sections — stack, conventions, commands. That's what your agent reads at the start of every session.
-This script will ask for your project name and language, and copy the `CLAUDE.md` template into your project root. You can then fill in the project-specific details to guide your AI agent.
 
 
 ## Updating
- 
-To pull in the latest agents and skills:
+  
+To pull in the latest agents and commands:
  
 ```bash
 cd .opencode # or .claude
@@ -81,4 +76,4 @@ git pull
  
 ## Contributing
  
-Found an agent or skill worth sharing? PRs are welcome. Check [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Found an agent or command worth sharing? PRs are welcome. Check [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
