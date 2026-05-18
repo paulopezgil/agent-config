@@ -12,21 +12,17 @@ Every new project starts the same way: the model is ready, the agent has no idea
   
 - **Agents** — Specialist personas for common roles (code reviewer, planner, docs writer, etc.), each scoped with the right tools and permissions
 - **Commands** — Reusable command definitions following the [open Agent Commands standard](https://openagentskills.dev)
-- **Templates** — Scaffolding files to generate project-specific AI configuration (`AGENTS.md`, `CLAUDE.md`)
 
 ### Available Agents
 | Agent | File | Purpose |
 | --- | --- | --- |
 | Explain | `agents/explain.md` | Explains the project architecture, codebase, and conventions. |
-| Linus Review | `agents/linus-review.md` | Delivers direct, technically rigorous code review feedback. |
-| Senior Architect | `agents/senior-architect.md` | Designs software architecture and technical implementation plans. |
-| Stepwise Builder | `agents/stepwise-builder.md` | Builds code incrementally through collaborative, step-by-step changes. |
 
 ### Available Commands
 | Command | File | Purpose |
 | --- | --- | --- |
-| ai-commit | `commands/ai-commit.md` | Generates and applies an AI-driven commit. |
-| end-session | `commands/end-session.md` | Finalizes a coding session and updates project documentation. |
+| commit | `commands/commit.md` | Stages changes and creates a git commit with AI-generated messages. |
+| end-session | `commands/end-session.md` | Finalizes a coding session: generates session logs, memory deltas, and updates AGENTS.md. |
 | update-readme | `commands/update-readme.md` | Updates README.md to reflect current project state. |
 
 ## How to Install
@@ -47,21 +43,7 @@ git clone https://github.com/paulopezgil/agent-config .claude
 
 ## Initialization
 
-After cloning the repository, manually copy the template you need into your project root and customize it.
-
-### OpenCode
-
-```bash
-cp .opencode/templates/AGENTS.md ./AGENTS.md
-```
-
-### Claude Code
-
-```bash
-cp .claude/templates/CLAUDE.md ./CLAUDE.md
-```
-
-Open the generated file and fill in the project-specific sections — stack, conventions, commands. That's what your agent reads at the start of every session.
+After cloning the repository, create an `AGENTS.md` or `CLAUDE.md` in your project root and customize it with your project-specific sections — stack, conventions, commands. That's what your agent reads at the start of every session.
 
 
 ## Updating
