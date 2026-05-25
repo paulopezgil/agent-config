@@ -26,7 +26,3 @@ When the user runs this command, follow these steps:
 4. **Commit**:
    - Run `git commit -m "<generated message>"`.
    - Run `git status` to confirm success.
-
-5. **Update Documentation** (if applicable):
-   - If the changes introduce new features, alter architecture, or change user-facing instructions, update `README.md` accordingly.
-   - Create a separate commit for documentation updates with message: `docs: update README for <change summary>`.
